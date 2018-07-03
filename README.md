@@ -17,6 +17,18 @@ docker run -it \
 	vanessa/qt-creator
 ```
 
+If you want to bind a folder with projects, etc., don't forget to do that!
+
+```bash
+docker run -it \
+	--privileged \
+        -v $PWD:/home/user/projects \
+	-v /tmp/.X11-unix:/tmp/.X11-unix \
+	-e DISPLAY=$DISPLAY \
+	--name qt-sh \
+	vanessa/qt-creator
+```
+
 The container is now running, and the command above will shell you inside. You won't need to start it again. If you need to stop and remove it, you should do this.
 
 ```bash

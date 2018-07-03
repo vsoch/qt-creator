@@ -8,7 +8,7 @@ USER root
 
 WORKDIR /home/user
 
-RUN apt-get update && apt-get install -y openjdk-8-jre build-essential && \
+RUN apt-get update && apt-get install -y openjdk-8-jre build-essential gdb && \
     wget http://web.stanford.edu/dept/cs_edu/qt-creator/qtcreator/simple-project.zip && \
     unzip simple-project.zip && chown -R user /home/user
 
